@@ -1,0 +1,12 @@
+
+작성 번호 : <%=@show_post.id%>
+<br>
+제목 : <%= @show_post.title%>
+<br>
+내용 : <%= @show_post.content%>
+<br>
+<a href="/">[목록]</a>
+
+<a href="/board/edit/<%=@show_post.id%>">[수정]</a>
+
+<a href="/board/destroy/<%=@show_post.id%>">[삭제]</a>

@@ -1,0 +1,15 @@
+
+
+
+<a href="/board/new">[글쓰기]</a>
+
+<hr>
+<% @list_post.each do |p| %>
+    번호: <%= p.id %>
+    <br>
+    <a href="/board/show/<%=p.id%>">제목: <%= p.title %></a>
+    <br>
+    작성자:<%= p.editor %>
+    <br>
+    <hr>
+<% end %>
