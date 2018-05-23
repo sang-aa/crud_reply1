@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   root 'board#index'
+  
+  post 'comment/reply_create'
+
+  get 'comment/reply_delete/:reply_id' => 'reply#destroy'
+
+  
 
   get 'board/show/:show_id' => 'board#show'
 

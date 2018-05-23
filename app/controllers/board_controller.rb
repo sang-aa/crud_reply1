@@ -7,6 +7,9 @@ class BoardController < ApplicationController
   def show
     #게시글을 보여준다.
     @show_post = Post.find(params[:show_id])
+    
+    #replies를 하기위해 모델rb파일에 미리 관계를 정의해 두어서 아래 코드가 가능!
+    @show_reply = @show_post.replies
   end
 
   def new
