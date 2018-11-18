@@ -1,15 +1,21 @@
-
-
-
-<a href="/board/new">[글쓰기]</a>
-
-<hr>
-<% @list_post.each do |p| %>
-    번호: <%= p.id %>
-    <br>
-    <a href="/board/show/<%=p.id%>">제목: <%= p.title %></a>
-    <br>
-    작성자:<%= p.editor %>
-    <br>
+<div class="container">
+    
+    <a href="/board/new">[글쓰기]</a>
+    
     <hr>
-<% end %>
+    <% @list_post.each do |p| %>
+        
+        <div class="card">
+            
+            번호: <%= p.id %>
+            <br>
+            <a href="/board/show/<%=p.id%>">제목: <%= p.title %></a>
+            <br>
+            작성자:<%= p.editor %>
+            <br>
+            
+        </div>
+        <br>
+    <% end %>
+    
+</div>
